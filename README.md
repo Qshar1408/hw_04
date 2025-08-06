@@ -99,7 +99,7 @@ module "vpc_dev" {
 }
 ```
 
-#### Файл DOC.dm: [DOC.dm](https://github.com/Qshar1408/hw_04/blob/main/src/01-03/vpc/DOC.md)
+#### Файл DOC.dm: [DOC.dm](https://github.com/Qshar1408/hw_04/blob/main/src/01-03/DOC.md)
 
 ### Задание 3
 1. Выведите список ресурсов в стейте.
