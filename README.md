@@ -59,8 +59,17 @@ variable "ssh-authorized-keys" {
 
 1. Напишите локальный модуль vpc, который будет создавать 2 ресурса: **одну** сеть и **одну** подсеть в зоне, объявленной при вызове модуля, например: ```ru-central1-a```.
 2. Вы должны передать в модуль переменные с названием сети, zone и v4_cidr_blocks.
-3. Модуль должен возвращать в root module с помощью output информацию о yandex_vpc_subnet. Пришлите скриншот информации из terraform console о своем модуле. Пример: > module.vpc_dev  
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_003.png)
+ 
+3. Модуль должен возвращать в root module с помощью output информацию о yandex_vpc_subnet. Пришлите скриншот информации из terraform console о своем модуле. Пример: > module.vpc_dev
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_004.png)
+ 
 4. Замените ресурсы yandex_vpc_network и yandex_vpc_subnet созданным модулем. Не забудьте передать необходимые параметры сети из модуля vpc в модуль с виртуальной машиной.
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_005.png)
+
 5. Сгенерируйте документацию к модулю с помощью terraform-docs.
  
 Пример вызова
