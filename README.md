@@ -156,6 +156,13 @@ module "vpc_dev" {
 
 Предоставьте код, план выполнения, результат из консоли YC.
 
+#### Код Задание_04: [Задание_04](https://github.com/Qshar1408/hw_04/blob/main/src/04)
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_012.png)
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_013.png)
+
+
 ### Задание 5*
 
 1. Напишите модуль для создания кластера managed БД Mysql в Yandex Cloud с одним или несколькими(2 по умолчанию) хостами в зависимости от переменной HA=true или HA=false. Используйте ресурс yandex_mdb_mysql_cluster: передайте имя кластера и id сети.
