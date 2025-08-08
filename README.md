@@ -156,7 +156,7 @@ module "vpc_dev" {
 
 Предоставьте код, план выполнения, результат из консоли YC.
 
-#### Код Задание_04: [Задание_04](https://github.com/Qshar1408/hw_04/blob/main/src/04)
+#### Код_Задание_04: [Код_Задание_04](https://github.com/Qshar1408/hw_04/blob/main/src/04)
 
 ![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_012.png)
 
