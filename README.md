@@ -103,10 +103,25 @@ module "vpc_dev" {
 
 ### Задание 3
 1. Выведите список ресурсов в стейте.
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_006.png)
+
 2. Полностью удалите из стейта модуль vpc.
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_007.png)
+
 3. Полностью удалите из стейта модуль vm.
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_008.png)
+
 4. Импортируйте всё обратно. Проверьте terraform plan. Значимых(!!) изменений быть не должно.
 Приложите список выполненных команд и скриншоты процессы.
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_009.png)
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_010.png)
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_011.png)
 
 ## Дополнительные задания (со звёздочкой*)
 
