@@ -169,12 +169,26 @@ module "vpc_dev" {
 ### Задание 7*
 
 1. Разверните у себя локально vault, используя docker-compose.yml в проекте.
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_014.png)
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_015.png)
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_016.png)
+
+
 2. Для входа в web-интерфейс и авторизации terraform в vault используйте токен "education".
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_017.png)
+
 3. Создайте новый секрет по пути http://127.0.0.1:8200/ui/vault/secrets/secret/create
 Path: example  
 secret data key: test 
-secret data value: congrats!  
-4. Считайте этот секрет с помощью terraform и выведите его в output по примеру:
+secret data value: congrats!
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_022.png)
+
+5. Считайте этот секрет с помощью terraform и выведите его в output по примеру:
 ```
 provider "vault" {
  address = "http://<IP_ADDRESS>:<PORT_NUMBER>"
@@ -192,7 +206,40 @@ output "vault_example" {
 Можно обратиться не к словарю, а конкретному ключу:
 terraform console: >nonsensitive(data.vault_generic_secret.vault_example.data.<имя ключа в секрете>)
 ```
-5. Попробуйте самостоятельно разобраться в документации и записать новый секрет в vault с помощью terraform. 
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_018.png)
+
+5. Попробуйте самостоятельно разобраться в документации и записать новый секрет в vault с помощью terraform.
+
+#### Для написания нового секрета создаю новый ресурс:
+
+```bash
+resource "vault_generic_secret" "top_secret" {
+  path = "secret/example"
+
+  data_json = jsonencode({
+    top_secret = var.my_secret
+  })
+}
+```
+#### Новое значение - DevOpsMonkey 
+
+```bash
+variable "my_secret" {
+  type    = string
+  default = "DevOpsMonkey"
+}
+```
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_019.png)
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_020.png)
+
+![hw_04](https://github.com/Qshar1408/hw_04/blob/main/img/hw_04_021.png)
+
+
+#### Код_Задание_07: [Код_Задание_07](https://github.com/Qshar1408/hw_07/blob/main/src/07)
+
 
 ### Задание 8*
 Попробуйте самостоятельно разобраться в документаци и с помощью terraform remote state разделить root модуль на два отдельных root-модуля: создание VPC , создание ВМ . 
